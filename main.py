@@ -6,12 +6,12 @@ from config import URL, URL_BASE
 # criar o arquivo que será usado para salvar os dados
 arquivo_csv = csv.writer(open('nomes_artistas_z.csv', 'w', newline='\n'))
 
-#criar cabeçalho (colunas) dos dados no arquivo
+# criar cabeçalho (colunas) dos dados no arquivo
 arquivo_csv.writerow(['Nomes Artistas', 'URL Artistas'])
 
 # criando uma lista de paginas que pegaremos os dados
 paginas = []
-for num_page in range(1,5):
+for num_page in range(1, 5):
     paginas.append(f"https://web.archive.org/web/20121007172955/https://www.nga.gov/collection/anZ{num_page}.htm")
 
 
